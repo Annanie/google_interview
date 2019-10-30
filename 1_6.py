@@ -11,8 +11,8 @@ def rotate(M):
     N = len(M)
     for i in range(int(N/2)):
         for j in range(N-i):
-            swapped_values = swap4(M[i+j][j], M[i+j][N-i-j-1], M[N-i-j-1][N-i-j-1], M[N-i-j-1][i+j])
-            (M[i+j][j], M[i+j][N-i-j-1], M[N-i-j-1][N-i-j-1], M[N-i-j-1][i+j]) = swapped_values
+            swapped_values = swap4(M[i+j][j], M[i+j][-i-j-1], M[-i-j-1][-i-j-1], M[-i-j-1][i+j])
+            (M[i+j][j], M[i+j][-i-j-1], M[-i-j-1][-i-j-1], M[-i-j-1][i+j]) = swapped_values
     return M
 
 test_list = [
